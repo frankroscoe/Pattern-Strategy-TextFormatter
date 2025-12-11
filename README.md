@@ -21,14 +21,16 @@ The project is designed as a **teaching artifact** and portfolio piece, showing 
   - Class diagram (`.png`, `.pdf`)
   - Editable UML (`.uxf`)
 - `.gitignore` configured to exclude build outputs and Visual Studio artifacts.
+- `test.sh` script provides automated sample, edge, and punctuation-heavy case testing.
 
 ---
 
 ## Roadmap
 Future updates will:
 - **Decompose** the single `.cpp` file into header (`.h`) and source (`.cpp`) files for best practices.
-- Add **unit tests** to demonstrate strategy switching.
-- Expand documentation with more design pattern examples.
+- Expand automated testing: build on `test.sh` and add **unit tests** (e.g., GoogleTest) to demonstrate strategy switching at the class level.
+- Integrate **CI/CD automation** using GitHub Actions for reproducible builds and test runs.
+- Add a **build status badge** to the README for recruiter-facing polish and transparency.
 
 ---
 
@@ -41,6 +43,9 @@ Future updates will:
     │   ├── Pattern-Strategy-TextFormatter-UML-ClassDiagram.png
     │   ├── Pattern-Strategy-TextFormatter-UML-ClassDiagram.pdf
     │   └── Pattern-Strategy-TextFormatter-UML-ClassDiagram.uxf
+    ├── test.sh                      # Automated test script (sample, edge, punctuation cases)
+    ├── README.md
+    ├── LICENSE
     └── .gitignore
 
 ---
@@ -66,11 +71,26 @@ Future updates will:
 
 ---
 
+## Testing
+
+This project includes a Bash test script (`test.sh`) that compiles the program and runs automated checks against sample, edge, and punctuation-heavy inputs.
+
+To run the tests:
+
+```bash
+chmod +x test.sh
+./test.sh
+```
+The script will print the formatted output for each case and report **PASS/FAIL** results.
+
+---
+
 ## Educational Notes
 - This repo models **professional Git workflow discipline**:
   - Clean commit history.
   - Recruiter‑friendly documentation.
   - UML artifacts for teaching clarity.
+  - Automated testing and CI/CD readiness for industry alignment.
 - Intended for **students, educators, and recruiters** to see both code and design rationale.
 
 ---
