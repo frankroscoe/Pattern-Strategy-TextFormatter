@@ -1,0 +1,23 @@
+# Build directories
+Debug/
+Release/
+
+# IDE metadata
+.vs/
+.vscode/
+
+# Compiled objects and executables
+*.obj
+*.exe
+*.out
+*.dll
+*.lib
+*.so
+
+# Debug files
+*.pdb
+*.idb
+
+# User-specific files
+*.user
+*.suo
